@@ -1,9 +1,155 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Tast</title>
-    </head>
-    <body>
-        <p>Tast - healthy diet is a must</p>
-    </body>
+<!doctype html>
+<html lang="pl-PL">
+<head>
+	<!--LPT wersja z fexboxem headtic,bt2, oraz auto headdown,bt1, bt4. SmoothScrol, zwijane headdown zaimplementowane.
+	Trzeba flexboxa w bt3 i footer oraz dodać flexowe kulki w bt2, poprawić media queries i ogólnie pomyśleć o optymalizacji 
+	oraz format zdjęć na JPEG 2000 lub coś innego z dobrą kompresją, oraz może więcej skoków zdjęć dla wydajności. Można
+	zaimplementować jeszcze prawdziwe scrolowanie paralaxyjne-->
+	<title>Tast | Zyskaj żywieniową inspirację !</title>
+	<link rel="stylesheet" type="text/css" href="lpt.css"/>
+	<link rel="shortcut icon" href="graf/logo_skrot.png"/>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta name="description" content="Tast App Wep page"/>
+	<meta name="keywords" content="Food, App, Tast, Recipe, Meal, Jedzenie, Aplikacja, Przepis, Posiłek"/>
+	<meta name="author" content="Tast App team"/>
+	<meta name="copyright" content="Tast App Team"/>
+	<meta name="robots" content="index, follow" />
+</head>
+<body>		<!-- headstick, headdown, bt1, bt2 on div_to_unstick -->
+<div id="start"></div>
+<div id="div_to_unstick">
+	<div class="headstic">
+		<div id="himg" >
+			<a href="#start" id="hnota">
+				<img src="graf/logo_biale.png" alt="Tast" class="headlog"/>
+			</a>
+		</div>
+		<div id="hp">
+		<p><b>Głodny Inspiracji?</b></p>
+		</div>
+		<div id="ha">
+		<a href="https://play.google.com/store?hl=pl" target="_blank"><b>Pobierz za darmo</b></a>
+		</div>
+	</div>
+	<div class="headdown" id="hd" style="transition: max-height cubic-bezier(.4,0,.6,1) 0.7s;">
+		<div id="headdown_has">
+			<p><b>Jedz z nami ciekawiej!</b></p>
+		</div>
+	</div>
+	<div id="headshadow"></div>
+	<div class="paralax" id="zdj1"></div>
+	<div class="btxt" id="bt1">
+		<div id="bt1_1">
+			<div id="bt1head"><p><b>Czym jest Tast?</b></p></div>
+			<div id="bt1txt"><p>Tast to rewolucyjna aplikacja dostarczająca spersonalizowane przepisy w oparciu o preferencje żywieniowe użytkownika!</p></div>
+		</div>
+	</div>
+	<div class="paralax" id="zdj2"></div>
+	<div class="btxt" id="bt2">
+		<div id="bt2up">
+			<p><b>Jak to działa?</b></p>
+		</div>
+		<div id="bt2down">
+			<div class="bt2d" id="bt2d2">
+				<img src="graf/bt2_1.png" alt="1" class="bt2i1" id="bt2img1"/>
+				<p>Wybierz filtry, oraz produkty z których ma być danie</p></div>
+			<div class="bt2d" id="bt2d3">
+				<button id="bt2button1">
+					<img src="graf/bt2_0.png" alt="&gt;" class="bt2ii" id="bt2imgs1"/></button></div>
+			<div class="bt2d" id="bt2d4">
+				<img src="graf/bt2_2.png" alt="2" class="bt2i2" id="bt2img2"/>
+				<p>Aplikacja wybierze dla ciebie najlepsze danie w oparciu o twoje żywieniowe referencje, możesz je zatwierdzić, zapisać na później, lub odrzucić, dzięki czemu zobaczysz następne</p></div>
+			<div class="bt2d" id="bt2d5">
+				<button id="bt2button2">
+					<img src="graf/bt2_0.png" alt="&gt;" class="bt2ii" id="bt2imgs2"/></button></div>
+			<div class="bt2d" id="bt2d6">
+				<img src="graf/bt2_3.png" alt="3" class="bt2i3" id="bt2img3"/>
+				<p>Po zatwierdzeniu dania zobaczysz szczegółowy przepis, miłego gotowania!</p></div>
+		</div>
+	</div>
+	<div class="paralax" id="zdj3"></div>
+</div>	
+	<div class="btxt" id="bt3">
+		<div id="bt3d1">
+			<p><b>Nasze zalety</b></p>
+		</div>
+		<div id="bt3d2">
+			<img src="graf/bt3_1.png" alt="1" class="bt3i1"/>
+			<p>Dostajesz jeden przepis wybrany specjalnie dla ciebie, nie zostajesz przytłoczony stertą przepisów</p>
+		</div>
+		<div id="bt3d3">
+			<img src="graf/bt3_2.png" alt="2" class="bt3i2"/>
+			<p>Posiadamy ogromną bazę różnorodnych przepisów z różnych kuchni świata, dzięki czemu wyelimiujesz nudę ze swojej kuchni</p>
+		</div>
+		<div id="bt3d4">
+			<img src="graf/bt3_3.png" alt="3" class="bt3i3"/>
+			<p>Aplikacja jest darmowa, prosta w obsłudze i przejrzysta, dzięki czemu każdy może z niej skorzystać</p>
+		</div>
+		<div id="bt3d5">
+			<img src="graf/bt3_4.png" alt="4" class="bt3i4"/>
+			<p>Przepisy są filtrowane w oparciu o wybrane składniki oraz diety i alergie</p>
+		</div>
+	</div>
+	<div class="btxt" id="bt4">
+		<div id="bt4d1">
+			<p>Wiesz już z czym to się je więc ...</p>
+		</div>
+		<div id="bt4d2">
+			<div id="bt4d3">
+				<a href="https://play.google.com/store?hl=pl" target="_blank"><b>Pobierz za darmo</b></a>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div id="f1">
+			<a href="#start">
+				<img src="graf/logo_fiol.png" alt="Tast" class="footerlog"/>
+			</a>
+		</div>
+		<div id="f2">
+			<div id="f30"></div>
+			<div id="f3">
+				<div class="stabic" id="s1">
+					<a href="https://www.facebook.com/" target="_blank"><img src="graf/foot_1.png" alt="Facebook" class="footerico"/></a>
+				</div>
+				<div class="stabic" id="s2">
+					<a href="https://play.google.com/store?hl=pl" target="_blank"><img src="graf/foot_2.png" alt="Google play" class="footerico"/></a>
+				</div>
+				<div class="stabic" id="s3">
+					<a href="https://www.apple.com/pl/ios/app-store/" target="_blank"><img src="graf/foot_3.png" alt="Ios store" class="footerico"/></a>
+				</div>
+				<div class="stabic" id="s4">
+					<a href="https://www.instagram.com/?hl=pl" target="_blank"><img src="graf/foot_4.png" alt="Instagram" class="footerico"/></a>
+				</div>
+			</div>
+			<div id="f40"></div>
+			<div id="f4">
+				<p>Copyright 2019 TastAppTeam</p>
+			</div>
+		</div>
+		<div id="f5">
+		</div>
+	</div>
+	<script src="lpt(img).js"></script>
+	<script>
+	// zwija heddown z 0
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+	  if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+		document.getElementById("hd").style.maxHeight = "1px";
+	  } else {
+		document.getElementById("hd").style.maxHeight = "300px";
+	  }
+	}
+	</script>
+	<script>
+		window.onload = function() {
+		  var element = document.createElement("script");
+		  element.src = "lpt.js";
+		  document.body.appendChild(element);
+		};
+	</script> 
+</body>
 </html>
