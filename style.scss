@@ -1,0 +1,337 @@
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: $elevation_0;
+  overflow: hidden;
+  color: $text_main_color; //delet dis
+  font-family: $font-family-1;
+}
+
+.header {
+  width: 100%;
+  height: 5rem;
+  position: fixed;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $elevation_1;
+  color: $text_main_color;
+  z-index: 1;
+
+  /*Left menu*/
+  &__left-menu {
+    width: 450px;
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+  }
+
+  &__icon {
+    width: 5rem;
+    height: 5rem;
+    background-image: url("icon.png");
+    cursor: pointer;
+  }
+
+  &__category {
+    display: flex;
+    height: 5rem;
+    align-items: center;
+    margin: 0px 20px;
+    cursor: pointer;
+
+    &--active {
+      padding-top: 3px;
+      border-bottom: 2px solid $accent;
+      color: $accent;
+    }
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__dot-menu {
+    padding: 6px 5px 3px;
+    margin: 0px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+    &:hover {
+      background-color: $elevation_3;
+      border-radius: 4px;
+    
+      &::before {
+        content: "";
+        border-width: 4px;
+        border-style: solid;
+        border-color: transparent transparent white transparent;
+        position: absolute;
+        top: 27px;
+        left: 10px;
+      }
+
+      &::after {
+        content: "More";
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: $elevation_0;
+        background-color: white;
+        position: absolute;
+        padding: 5px 6px 1px 6px;
+        border-radius: 3px;
+        left: -5px;
+        top: 35px;
+      }
+    }
+  }
+
+  /*Central menu*/
+  &__central-menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__searchbar {
+    width: 355px;
+    height: 3.6rem;
+    background-color: $elevation_3;
+    border: none;
+    border-radius: 6px 0px 0px 6px;
+    padding-left: 15px;
+    color: $text_main_color;
+    position: relative;
+    z-index: 2;
+    
+    &::placeholder {
+      color: $text_light_color;
+    }
+
+    &:focus {
+      background-color: $elevation_0;
+      border: 2px solid $accent_dark;
+    }
+
+    &:invalid {
+      box-shadow: none;
+    }
+  }
+
+  &__suggestions-list {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    background-color: $elevation_1;
+    border-radius: 6px;
+    padding: 46px 10px 0px 10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 6px 16px 0px, rgba(0, 0, 0, 0.4) 0px 0px 4px 0px;
+  }
+
+  &__suggestions-item {
+    width: 103%;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    color: $text_main_color;
+    padding: 3px 5px;
+    margin-left: -5px;
+    border-radius: 6px;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      background-image: var(--image);
+      width: 30px;
+      height: 40px;
+      margin-right: 5px;
+    }
+
+    &:nth-last-child(1) {
+      margin-bottom: 5px;
+    }
+
+    &:hover {
+      background-color: $elevation_3--light;
+    }
+  }
+
+  &__searchbar:invalid ~ &__suggestions-list {
+    display: none;
+  }
+
+  &__searchbar:not(:focus) ~ &__suggestions-list {
+    display: none;
+  }
+
+  &__search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 0px 6px 6px 0px;
+    background-color: #29292c;
+    border: none;
+    border-left: 1px solid $elevation_1;
+    position: relative;
+    z-index: 2;
+
+    svg {
+      transform: scale(1.25);
+      fill: #5b5b5d;
+    }
+  }
+
+  &__searchbar:valid ~ &__search-button {
+    &--disabled {
+      display: none;
+    }
+
+    &--enabled {
+      cursor: pointer;
+      background-color: $elevation_3;
+
+      svg {
+        fill: $text_main_color;
+      }
+    }
+  }
+
+  &__searchbar:invalid ~ &__search-button {
+    &--disabled {
+      cursor: not-allowed;
+    }
+    &--enabled {
+      display: none;
+    }
+  }
+
+  /*Right menu*/
+  &__right-menu {
+    display: flex;
+    justify-content: end;
+    width: 450px;
+    align-items: center;
+  }
+
+  &__prime-loot {
+    width: 3rem;
+    height: 3rem;
+    margin: 0px 5px;
+    position: relative;
+    padding: 5px 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $elevation_3;
+      border-radius: 4px;
+    
+      &::before {
+        content: "";
+        border-width: 4px;
+        border-style: solid;
+        border-color: transparent transparent white transparent;
+        position: absolute;
+        top: 27px;
+        left: 10px;
+      }
+
+      &::after {
+        content: "Prime Loot";
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: $elevation_0;
+        background-color: white;
+        width: 58px;
+        position: absolute;
+        padding: 5px 6px 4px 6px;
+        border-radius: 3px;
+        left: -20px;
+        top: 35px;
+      }
+    }
+  }
+
+  &__button {
+    height: 3rem;
+    padding: 0px 1rem;
+    font-size: 1.2rem;
+    margin: 0px 5px;
+    display: flex;
+    align-items: center;
+    color: $text_main_color;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &--gray {
+      background-color: $elevation_3;
+
+      &:hover {
+        background-color: $elevation_3--light;
+      }
+    }
+
+    &--purple {
+      background-color: $accent_dark;
+       &:hover {
+         background-color: $accent_dark--selected;
+       }
+    }
+  }
+
+  &__user-menu {
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-right: 9px;
+    margin-left: 4px;
+    padding: 6px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $elevation_3;
+      border-radius: 4px;
+    }
+  }
+}
+
+.sidebar {
+  width: 24rem;
+  height: calc(100vh - 5rem);
+  position: fixed;
+  top: 5rem;
+  left: 0px;
+  background-color: $elevation_2;
+  z-index: 1;
+}
+
+.content {
+  width: calc(100% - 24rem);
+  height: calc(100% - 5rem);
+  position: relative;
+  top: 5rem;
+  left: 24rem;
+  overflow: auto;
+}

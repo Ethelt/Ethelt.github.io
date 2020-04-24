@@ -1,0 +1,18 @@
+$elevation_0: rgb(14, 14, 16); /*background*/
+$elevation_1: rgb(24, 24, 27); /*header*/
+$elevation_2: rgb(31, 31, 35); /*sidebar*/
+//$elevation_3: rgba(255, 255, 255, 0.15); /*tag buttons, login button*/
+$elevation_3: #3a3a3d;
+$elevation_3--light: #464649;
+
+$text_main_color: rgb(239, 239, 241); /*section names, menu, descriptions*/
+$text_secondary_color: rgb(222, 222, 227); /*stream names, sidebar channel names*/
+$text_dark_color: rgb(173, 173, 184); /* game and channel names*/
+$text_light_color: rgba(255, 255, 255, 0.7); /*tag names*/
+
+
+$accent: rgb(169, 112, 255); /*basically everything purple*/
+$accent_dark: rgb(145, 71, 255); /*sign in button*/
+$accent_dark--selected: #772ce8;
+
+$font-family-1: Roobert, "Helvetica Neue", Helvetica, Arial, sans-serif; // Left header menu

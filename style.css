@@ -1,0 +1,257 @@
+/*background*/
+/*header*/
+/*sidebar*/
+/*section names, menu, descriptions*/
+/*stream names, sidebar channel names*/
+/* game and channel names*/
+/*tag names*/
+/*basically everything purple*/
+/*sign in button*/
+* {
+  box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px; }
+
+html {
+  font-size: 10px; }
+
+body {
+  background-color: #0e0e10;
+  overflow: hidden;
+  color: #efeff1;
+  font-family: Roobert, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.header {
+  width: 100%;
+  height: 5rem;
+  position: fixed;
+  top: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #18181b;
+  color: #efeff1;
+  z-index: 1;
+  /*Left menu*/
+  /*Central menu*/
+  /*Right menu*/ }
+  .header__left-menu {
+    width: 450px;
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem; }
+  .header__icon {
+    width: 5rem;
+    height: 5rem;
+    background-image: url("icon.png");
+    cursor: pointer; }
+  .header__category {
+    display: flex;
+    height: 5rem;
+    align-items: center;
+    margin: 0px 20px;
+    cursor: pointer; }
+    .header__category--active {
+      padding-top: 3px;
+      border-bottom: 2px solid #a970ff;
+      color: #a970ff; }
+    .header__category:hover {
+      color: #a970ff; }
+  .header__dot-menu {
+    padding: 6px 5px 3px;
+    margin: 0px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative; }
+    .header__dot-menu:hover {
+      background-color: #3a3a3d;
+      border-radius: 4px; }
+      .header__dot-menu:hover::before {
+        content: "";
+        border-width: 4px;
+        border-style: solid;
+        border-color: transparent transparent white transparent;
+        position: absolute;
+        top: 27px;
+        left: 10px; }
+      .header__dot-menu:hover::after {
+        content: "More";
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #0e0e10;
+        background-color: white;
+        position: absolute;
+        padding: 5px 6px 1px 6px;
+        border-radius: 3px;
+        left: -5px;
+        top: 35px; }
+  .header__central-menu {
+    display: flex;
+    align-items: center;
+    position: relative; }
+  .header__searchbar {
+    width: 355px;
+    height: 3.6rem;
+    background-color: #3a3a3d;
+    border: none;
+    border-radius: 6px 0px 0px 6px;
+    padding-left: 15px;
+    color: #efeff1;
+    position: relative;
+    z-index: 2; }
+    .header__searchbar::placeholder {
+      color: rgba(255, 255, 255, 0.7); }
+    .header__searchbar:focus {
+      background-color: #0e0e10;
+      border: 2px solid #9147ff; }
+    .header__searchbar:invalid {
+      box-shadow: none; }
+  .header__suggestions-list {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    background-color: #18181b;
+    border-radius: 6px;
+    padding: 46px 10px 0px 10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 6px 16px 0px, rgba(0, 0, 0, 0.4) 0px 0px 4px 0px; }
+  .header__suggestions-item {
+    width: 103%;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    color: #efeff1;
+    padding: 3px 5px;
+    margin-left: -5px;
+    border-radius: 6px; }
+    .header__suggestions-item::before {
+      content: "";
+      display: inline-block;
+      background-image: var(--image);
+      width: 30px;
+      height: 40px;
+      margin-right: 5px; }
+    .header__suggestions-item:nth-last-child(1) {
+      margin-bottom: 5px; }
+    .header__suggestions-item:hover {
+      background-color: #464649; }
+  .header__searchbar:invalid ~ .header__suggestions-list {
+    display: none; }
+  .header__searchbar:not(:focus) ~ .header__suggestions-list {
+    display: none; }
+  .header__search-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 0px 6px 6px 0px;
+    background-color: #29292c;
+    border: none;
+    border-left: 1px solid #18181b;
+    position: relative;
+    z-index: 2; }
+    .header__search-button svg {
+      transform: scale(1.25);
+      fill: #5b5b5d; }
+  .header__searchbar:valid ~ .header__search-button--disabled {
+    display: none; }
+  .header__searchbar:valid ~ .header__search-button--enabled {
+    cursor: pointer;
+    background-color: #3a3a3d; }
+    .header__searchbar:valid ~ .header__search-button--enabled svg {
+      fill: #efeff1; }
+  .header__searchbar:invalid ~ .header__search-button--disabled {
+    cursor: not-allowed; }
+  .header__searchbar:invalid ~ .header__search-button--enabled {
+    display: none; }
+  .header__right-menu {
+    display: flex;
+    justify-content: end;
+    width: 450px;
+    align-items: center; }
+  .header__prime-loot {
+    width: 3rem;
+    height: 3rem;
+    margin: 0px 5px;
+    position: relative;
+    padding: 5px 5px;
+    cursor: pointer; }
+    .header__prime-loot:hover {
+      background-color: #3a3a3d;
+      border-radius: 4px; }
+      .header__prime-loot:hover::before {
+        content: "";
+        border-width: 4px;
+        border-style: solid;
+        border-color: transparent transparent white transparent;
+        position: absolute;
+        top: 27px;
+        left: 10px; }
+      .header__prime-loot:hover::after {
+        content: "Prime Loot";
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #0e0e10;
+        background-color: white;
+        width: 58px;
+        position: absolute;
+        padding: 5px 6px 4px 6px;
+        border-radius: 3px;
+        left: -20px;
+        top: 35px; }
+  .header__button {
+    height: 3rem;
+    padding: 0px 1rem;
+    font-size: 1.2rem;
+    margin: 0px 5px;
+    display: flex;
+    align-items: center;
+    color: #efeff1;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; }
+    .header__button--gray {
+      background-color: #3a3a3d; }
+      .header__button--gray:hover {
+        background-color: #464649; }
+    .header__button--purple {
+      background-color: #9147ff; }
+      .header__button--purple:hover {
+        background-color: #772ce8; }
+  .header__user-menu {
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-right: 9px;
+    margin-left: 4px;
+    padding: 6px;
+    cursor: pointer; }
+    .header__user-menu:hover {
+      background-color: #3a3a3d;
+      border-radius: 4px; }
+
+.sidebar {
+  width: 24rem;
+  height: calc(100vh - 5rem);
+  position: fixed;
+  top: 5rem;
+  left: 0px;
+  background-color: #1f1f23;
+  z-index: 1; }
+
+.content {
+  width: calc(100% - 24rem);
+  height: calc(100% - 5rem);
+  position: relative;
+  top: 5rem;
+  left: 24rem;
+  overflow: auto; }
+
+/*# sourceMappingURL=style.css.map */
