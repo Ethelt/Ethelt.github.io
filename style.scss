@@ -2,6 +2,11 @@
 
 * {
   box-sizing: border-box;
+
+  &::selection {
+    color: $text_main_color;
+    background-color: $accent-dark;
+  }
 }
 
 html, body {
@@ -17,7 +22,7 @@ html {
 body {
   background-color: $elevation_0;
   overflow: hidden;
-  color: $text_main_color; //delet dis
+  color: $text_main_color;
   font-family: $font-family-1;
 }
 
@@ -31,7 +36,8 @@ body {
   align-items: center;
   background-color: $elevation_1;
   color: $text_main_color;
-  z-index: 1;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.9) 0px 1px 2px 0px, rgba(0, 0, 0, 0.9) 0px 0px 2px 0px;
 
   /*Left menu*/
   &__left-menu {
@@ -317,6 +323,8 @@ body {
   }
 }
 
+
+// Sidebar
 .sidebar {
   width: 24rem;
   height: calc(100vh - 5rem);
@@ -325,6 +333,142 @@ body {
   left: 0px;
   background-color: $elevation_2;
   z-index: 1;
+}
+
+.sidebar-headline {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px 5px 10px;
+
+  &__text {
+    font-weight: bolder;
+    font-size: 1.1rem;
+    color: $text_main_color;
+    padding-top: 5px;
+  }
+
+  &__collapse {
+    padding: 5px 5px 0px 5px;
+
+    svg {
+      fill: $text_main_color
+    }
+
+    &:hover {
+      background-color: $elevation_3;
+    }
+  }
+}
+
+.reccomended-channel {
+  padding: 5px 15px 5px 10px;
+  cursor: pointer;
+  position: relative;
+
+  &:hover {
+    background-color: $elevation_2--light;
+
+    &::before {
+      content: attr(data-description);
+      font-size: 1.2rem;
+      width: 20rem;
+      height: 2.6rem;
+      background-color: $elevation_1;
+      position: absolute;
+      padding: 8px 5px 5px 8px;
+      left: 250px;
+      top: 0px;
+      border-radius: 6px;
+      box-shadow: rgba(0, 0, 0, 0.9) 0px 1px 2px 0px, rgba(0, 0, 0, 0.9) 0px 0px 2px 0px;
+    }
+    
+    &::after {
+      content: "";
+      border-width: 4px;
+      border-style: solid;
+      border-color: transparent $elevation_1 transparent transparent;
+      position: absolute;
+      top: 10px;
+      left: 242px;
+    }
+  }
+
+  &__image {
+    float: left;
+    border-radius: 50%;
+    width: 3rem;
+  }
+
+  &__names-container {
+    display: inline-flex;
+    flex-direction: column;
+    height: 3rem;
+    margin-left: 10px;
+    padding-top: 2px;
+  }
+
+  &__name {
+
+    &--channel {
+      font-size: 1.4rem;
+      color: $text_secondary_color;
+      font-weight: bold;
+    }
+
+    &--game {
+      font-size: 1.2rem;
+      color: $text_dark_color;
+      padding-top: 1px;
+    }
+  }
+
+  &__viewers-count {
+    float: right;
+    padding-top: 4px;
+    position: relative;
+    color: $text_secondary_color;
+
+    &::before {
+      font-size: 3rem;
+      content: "\2022";
+      color: red;
+      position: absolute;
+      left: -15px;
+      top: -7px;
+    }
+  }
+}
+
+.join-twitch-ad {
+  width: 220px;
+  padding: 20px;
+  margin: 10px;
+  background-color: $elevation_1;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.9) 0px 1px 2px 0px, rgba(0, 0, 0, 0.9) 0px 0px 2px 0px;
+
+  &__text {
+    display: block;
+
+    &--main {
+      font-size: 2.4rem;
+    }
+
+    &--secondary {
+      font-size: 1.4rem;
+    }
+
+    &--accented {
+      color: $accent;
+      display: inline;
+    }
+  }
+
+  button {
+    margin: 10px 0px 0px 0px;
+  }
 }
 
 .content {

@@ -9,6 +9,9 @@
 /*sign in button*/
 * {
   box-sizing: border-box; }
+  *::selection {
+    color: #efeff1;
+    background-color: #9147ff; }
 
 html, body {
   width: 100%;
@@ -34,7 +37,8 @@ body {
   align-items: center;
   background-color: #18181b;
   color: #efeff1;
-  z-index: 1;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.9) 0px 1px 2px 0px, rgba(0, 0, 0, 0.9) 0px 0px 2px 0px;
   /*Left menu*/
   /*Central menu*/
   /*Right menu*/ }
@@ -245,6 +249,100 @@ body {
   left: 0px;
   background-color: #1f1f23;
   z-index: 1; }
+
+.sidebar-headline {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px 5px 10px; }
+  .sidebar-headline__text {
+    font-weight: bolder;
+    font-size: 1.1rem;
+    color: #efeff1;
+    padding-top: 5px; }
+  .sidebar-headline__collapse {
+    padding: 5px 5px 0px 5px; }
+    .sidebar-headline__collapse svg {
+      fill: #efeff1; }
+    .sidebar-headline__collapse:hover {
+      background-color: #3a3a3d; }
+
+.reccomended-channel {
+  padding: 5px 15px 5px 10px;
+  cursor: pointer;
+  position: relative; }
+  .reccomended-channel:hover {
+    background-color: #26262c; }
+    .reccomended-channel:hover::before {
+      content: attr(data-description);
+      font-size: 1.2rem;
+      width: 20rem;
+      height: 2.6rem;
+      background-color: #18181b;
+      position: absolute;
+      padding: 8px 5px 5px 8px;
+      left: 250px;
+      top: 0px;
+      border-radius: 6px;
+      box-shadow: rgba(0, 0, 0, 0.9) 0px 1px 2px 0px, rgba(0, 0, 0, 0.9) 0px 0px 2px 0px; }
+    .reccomended-channel:hover::after {
+      content: "";
+      border-width: 4px;
+      border-style: solid;
+      border-color: transparent #18181b transparent transparent;
+      position: absolute;
+      top: 10px;
+      left: 242px; }
+  .reccomended-channel__image {
+    float: left;
+    border-radius: 50%;
+    width: 3rem; }
+  .reccomended-channel__names-container {
+    display: inline-flex;
+    flex-direction: column;
+    height: 3rem;
+    margin-left: 10px;
+    padding-top: 2px; }
+  .reccomended-channel__name--channel {
+    font-size: 1.4rem;
+    color: #dedee3;
+    font-weight: bold; }
+  .reccomended-channel__name--game {
+    font-size: 1.2rem;
+    color: #adadb8;
+    padding-top: 1px; }
+  .reccomended-channel__viewers-count {
+    float: right;
+    padding-top: 4px;
+    position: relative;
+    color: #dedee3; }
+    .reccomended-channel__viewers-count::before {
+      font-size: 3rem;
+      content: "\2022";
+      color: red;
+      position: absolute;
+      left: -15px;
+      top: -7px; }
+
+.join-twitch-ad {
+  width: 220px;
+  padding: 20px;
+  margin: 10px;
+  background-color: #18181b;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.9) 0px 1px 2px 0px, rgba(0, 0, 0, 0.9) 0px 0px 2px 0px; }
+  .join-twitch-ad__text {
+    display: block; }
+    .join-twitch-ad__text--main {
+      font-size: 2.4rem; }
+    .join-twitch-ad__text--secondary {
+      font-size: 1.4rem; }
+    .join-twitch-ad__text--accented {
+      color: #a970ff;
+      display: inline; }
+  .join-twitch-ad button {
+    margin: 10px 0px 0px 0px; }
 
 .content {
   width: calc(100% - 24rem);
