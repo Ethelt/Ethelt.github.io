@@ -126,6 +126,7 @@ body {
     color: $text_main_color;
     position: relative;
     z-index: 2;
+    outline: none;
     
     &::placeholder {
       color: $text_light_color;
@@ -478,4 +479,338 @@ body {
   top: 5rem;
   left: 24rem;
   overflow: auto;
+}
+
+.profile-image {
+  box-sizing: content-box;
+  border-radius: 50%;
+  width: 5rem;
+  height: auto;
+  float: left;
+  margin-right: 10px;
+
+  &--small {
+    width: 4rem;
+    cursor: pointer;
+  }
+}
+
+.tags-container {
+  padding-top: 7px;
+
+  @at-root
+  .tag {
+    color: $text_light_color;
+    background-color: $elevation_3;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 4px 8px 2px;
+    margin-right: 6px;
+    border-radius: 20px;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: $elevation_3--light;
+    }
+  }
+}
+
+.text {
+  
+  &--small {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
+
+  &--medium {
+    font-size: 1.4rem;
+  }
+
+  &--large {
+    font-size: 1.8rem;
+  }
+
+  &--bold {
+    font-weight: bold;
+  }
+
+  &--dark {
+    color: $text_dark_color;
+  }
+
+  &--accented {
+    color: $accent;
+  }
+
+  &--hoverable {
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &--link {
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.slider-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 3%;
+}
+
+.slider {
+  width: 85%;
+  height: 300px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__arrow {
+    box-sizing: content-box;
+    font-size: 1.7rem;
+    padding: 9px 12px;
+    transform: translateX(-12px);
+    border-radius: 6px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $elevation_4;
+    }
+
+    &:last-of-type {
+      transform: translateX(12px);
+    }
+  }
+
+  &__foreground {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 3;
+    position: relative;
+
+    video {
+      cursor: pointer;
+    }
+
+    &::after {
+      content: "LIVE";
+      background-color: red;
+      font-size: 1.2rem;
+      font-weight: bold;
+      position: absolute;
+      z-index: 4;
+      border-radius: 4px;
+      padding: 2px 5px 0px 5px;
+      top: 5px;
+      left: 5px;
+      cursor: pointer;
+    }
+  }
+
+  &__background {
+    width: 8%;
+    background-color: $elevation_3--light;
+    cursor: pointer;
+    transition-duration: 1s;
+    position: relative;
+
+    &:hover {
+      transform: scale(1.05);
+      filter: blur(1px) brightness(90%);
+      -webkit-filter: blur(0.5px) brightness(90%);
+    }
+
+    &--front {
+      height: 85%;
+      z-index: 2;
+      filter: blur(2px) brightness(80%);
+      -webkit-filter: blur(1px) brightness(80%);
+    }
+
+    &--back {
+      height: 70%;
+      z-index: 1;
+      filter: blur(2px) brightness(80%);
+      -webkit-filter: blur(2px) brightness(80%);
+    }
+  }
+
+  &__bg-image {
+    height: 100%;
+    width: auto;
+    
+    &--left {
+      float: left;
+    }
+
+    &--right {
+      float: right;
+    }
+  }
+
+  &__video {
+    height: 100%;
+    background-color: $elevation_2;
+  }
+
+  &__channel-info {
+    height: 100%;
+    background-color: $elevation_2;
+    padding: 10px;
+    overflow: auto;
+
+    .channel-data {
+      height: 5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.category {
+  width: 96%;
+  margin: 40px auto 0px auto; 
+  display: flex;
+  flex-direction: column;
+}
+
+.category__items {
+  width: 100%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.category-item {
+  width: calc(25% - 7px);
+
+  &--vertical {
+    width: calc(12.5% - 10px);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    height: 8rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 12px;
+
+    &--vertical {
+      height: 4rem;
+    }
+  }
+
+  &__audio {
+    width: 100%;
+  }
+
+  @at-root
+  .thumbnail {
+    margin-bottom: 8px;
+    transition: transform 0.1s linear;
+    background-color: transparent;
+    transition: background-color 0s linear;
+    transition-delay: 0.1s;
+    position: relative;
+
+    &__image {
+      background-color: red;
+      width: 100%;
+      transition: transform 0.1s linear;
+      transition-delay: 0.1s;
+    }
+
+    &__indicator {
+      position: absolute;
+      z-index: 5;
+      border-radius: 4px;
+      padding: 2px 5px 0px 5px;
+      transition: transform 0.1s linear;
+      transition-delay: 0.1s;
+      cursor: pointer;
+
+      &--live {
+        background-color: red;
+        top: 10px;
+        left: 10px;
+      }
+
+      &--views {
+        background-color: $elevation_4;
+        top: 160px;
+        left: 10px;
+      }
+    }
+
+    &:hover {
+      background-color: $accent_dark;
+      transition: background-color 0s 0s;
+      transition-delay: 0.1s;
+  
+      .thumbnail {
+        &__image {
+          transform: translate(6px, -4px);
+          transition-delay: 0.1s;
+        }
+
+        &__indicator {
+          transform: translate(6px, -4px);
+          transition-delay: 0.1s;
+        }
+      }
+    }
+  }
+}
+
+.load-more {
+  display: flex;
+  margin: 20px auto -20px;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 12px 3px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $elevation_4;
+  }
+
+  &__arrow {
+    font-size: 1.4rem;
+    margin-left: 10px;
+    padding-bottom: 3px;
+  }
+
+  &__cover {
+    position: absolute;
+    background-color: $elevation_0;
+    height: 50px;
+    width: 150px;
+    margin: 0 auto;
+    z-index: -1;
+  }
+
+  &__line {
+    position: absolute;
+    display: inline-block;
+    z-index: -2;
+    height: 1px;
+    background-color: $elevation_4;
+    width: 96%;
+    margin: -5px auto 0px;
+  }
+
+  &--only-line {
+    height: 3rem;
+  }
 }

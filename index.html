@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Twitch</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/a0b3884e26.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="header">
@@ -238,7 +239,601 @@
     </div>
 
     <div class="content">
-        
+        <div class="slider-wrapper">
+            <i class="slider__arrow fas fa-chevron-left"></i>
+            <div class="slider">
+                <div class="slider__background slider__background--back">
+                    <img class="slider__bg-image slider__bg-image--left" src="thumbnail1-440x248.jpg">
+                </div>
+                <div class="slider__background slider__background--front">
+                    <img class="slider__bg-image slider__bg-image--left" src="thumbnail1-440x248.jpg">
+                </div>
+                <div class="slider__foreground">
+                    <video class="slider__video" controls>
+                        <source src="magic.mp4" type="video/mp4">
+                        Something went horribly wrong and video couldn't be loaded.
+                    </video> 
+                    <div class="slider__channel-info">
+                        <img class="profile-image" src="profile-big.png">
+                        <div class="channel-data">
+                            <span class="text text--small text--bold text--accented text--link" href="">geenelly</span>
+                            <span class="text text--small text--accented text--link" href="">House Flipper</span>
+                            <span class="text text--small">1307 views</span>
+                        </div>
+                        <span class="tag">English</span><br>
+                        <br><span class="text text--small">Gee is known for her bubbly and bright personality as she plays a variety of games. She mainly focuses on games like Dead by Daylight and OSU currently. Everyone is warmly welcome into her community that she has built up over two years of streaming!</span>
+                    </div>
+                </div>
+                <div class="slider__background slider__background--front">
+                    <img class="slider__bg-image slider__bg-image--right" src="thumbnail1-440x248.jpg">
+                </div>
+                <div class="slider__background slider__background--back">
+                    <img class="slider__bg-image slider__bg-image--right" src="thumbnail1-440x248.jpg">
+                </div>
+            </div>
+            <i class="slider__arrow fas fa-chevron-right"></i>
+        </div>
+
+        <div class="category">
+            <span class="text text--large text--bold">Live channels we think you’ll like</span>
+            <div class="category__items">
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <img class="profile-image profile-image--small" src="./profile-small.png">
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <img class="profile-image profile-image--small" src="./profile-small.png">
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <img class="profile-image profile-image--small" src="./profile-small.png">
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <img class="profile-image profile-image--small" src="./profile-small.png">
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="load-more text text--small text--accented text--bold">
+                Show more <i class="load-more__arrow fas fa-chevron-down"></i>
+                <div class="load-more__cover"></div>
+                <div class="load-more__line"></div>
+            </div>
+        </div>
+
+        <div class="category">
+            <span class="text text--large text--bold"><span class="text--accented text--link">Categories</span> we think you’ll like</span>
+            <div class="category__items">
+                <div class="category-item--vertical">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./vertical.jpg">
+                    </div>
+                    <div class="category-item__info category-item__info--vertical">                       
+                        <span class="text text--medium text--bold text--hoverable">Magic: The Gathering</span>
+                        <span class="text text--small text--dark text--hoverable">1207 views</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item--vertical">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./vertical.jpg">
+                    </div>
+                    <div class="category-item__info category-item__info--vertical">                       
+                        <span class="text text--medium text--bold text--hoverable">Magic: The Gathering</span>
+                        <span class="text text--small text--dark text--hoverable">1207 views</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item--vertical">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./vertical.jpg">
+                    </div>
+                    <div class="category-item__info category-item__info--vertical">                       
+                        <span class="text text--medium text--bold text--hoverable">Magic: The Gathering</span>
+                        <span class="text text--small text--dark text--hoverable">1207 views</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item--vertical">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./vertical.jpg">
+                    </div>
+                    <div class="category-item__info category-item__info--vertical">                       
+                        <span class="text text--medium text--bold text--hoverable">Magic: The Gathering</span>
+                        <span class="text text--small text--dark text--hoverable">1207 views</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item--vertical">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./vertical.jpg">
+                    </div>
+                    <div class="category-item__info category-item__info--vertical">                       
+                        <span class="text text--medium text--bold text--hoverable">Magic: The Gathering</span>
+                        <span class="text text--small text--dark text--hoverable">1207 views</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item--vertical">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./vertical.jpg">
+                    </div>
+                    <div class="category-item__info category-item__info--vertical">                       
+                        <span class="text text--medium text--bold text--hoverable">Magic: The Gathering</span>
+                        <span class="text text--small text--dark text--hoverable">1207 views</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item--vertical">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./vertical.jpg">
+                    </div>
+                    <div class="category-item__info category-item__info--vertical">                       
+                        <span class="text text--medium text--bold text--hoverable">Magic: The Gathering</span>
+                        <span class="text text--small text--dark text--hoverable">1207 views</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item--vertical">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./vertical.jpg">
+                    </div>
+                    <div class="category-item__info category-item__info--vertical">                       
+                        <span class="text text--medium text--bold text--hoverable">Magic: The Gathering</span>
+                        <span class="text text--small text--dark text--hoverable">1207 views</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="load-more load-more--only-line text text--small text--accented text--bold">
+                <div class="load-more__line"></div>
+            </div>
+        </div>
+
+        <div class="category">
+            <span class="text text--large text--bold">All aboard the Hype Train!</span>
+            <div class="category__items">
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <img class="profile-image profile-image--small" src="./profile-small.png">
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <img class="profile-image profile-image--small" src="./profile-small.png">
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <img class="profile-image profile-image--small" src="./profile-small.png">
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <img class="profile-image profile-image--small" src="./profile-small.png">
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="load-more text text--small text--accented text--bold">
+                Show more <i class="load-more__arrow fas fa-chevron-down"></i>
+                <div class="load-more__cover"></div>
+                <div class="load-more__line"></div>
+            </div>
+        </div>
+
+        <div class="category">
+            <span class="text text--large text--bold">Reccomended <span class="text--accented text--link">Magic: the Gathering</span> channels</span>
+            <div class="category__items">
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <img class="profile-image profile-image--small" src="./profile-small.png">
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <img class="profile-image profile-image--small" src="./profile-small.png">
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <img class="profile-image profile-image--small" src="./profile-small.png">
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <img class="profile-image profile-image--small" src="./profile-small.png">
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="load-more text text--small text--accented text--bold">
+                Show more <i class="load-more__arrow fas fa-chevron-down"></i>
+                <div class="load-more__cover"></div>
+                <div class="load-more__line"></div>
+            </div>
+        </div>
+
+        <div class="category">
+            <span class="text text--large text--bold">Reccomended <span class="text--accented text--link">Just Chatting</span> channels</span>
+            <div class="category__items">
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <img class="profile-image profile-image--small" src="./profile-small.png">
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <img class="profile-image profile-image--small" src="./profile-small.png">
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <img class="profile-image profile-image--small" src="./profile-small.png">
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <img class="profile-image profile-image--small" src="./profile-small.png">
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="load-more text text--small text--accented text--bold">
+                Show more <i class="load-more__arrow fas fa-chevron-down"></i>
+                <div class="load-more__cover"></div>
+                <div class="load-more__line"></div>
+            </div>
+        </div>
+
+        <div class="category">
+            <span class="text text--large text--bold">Reccomended <span class="text--accented text--link">World of Tanks</span> channels</span>
+            <div class="category__items">
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <img class="profile-image profile-image--small" src="./profile-small.png">
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <img class="profile-image profile-image--small" src="./profile-small.png">
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <img class="profile-image profile-image--small" src="./profile-small.png">
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <img class="profile-image profile-image--small" src="./profile-small.png">
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                        <div class="tags-container">
+                            <span class="tag">English</span><span class="tag">English</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="load-more text text--small text--accented text--bold">
+                Show more <i class="load-more__arrow fas fa-chevron-down"></i>
+                <div class="load-more__cover"></div>
+                <div class="load-more__line"></div>
+            </div>
+        </div>
+
+        <div class="category">
+            <span class="text text--large text--bold">Reccomended game music</span>
+            <div class="category__items">
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                       <audio controls class="category-item__audio">
+                            <source src="./msza_nogi.mp3" type="audio/mpeg">
+                            Couldn't play audio
+                        </audio>
+                    </div>
+                </div>
+
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                       <audio controls class="category-item__audio">
+                            <source src="./msza_nogi.mp3" type="audio/mpeg">
+                            Couldn't play audio
+                        </audio>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                       <audio controls class="category-item__audio">
+                            <source src="./msza_nogi.mp3" type="audio/mpeg">
+                            Couldn't play audio
+                        </audio>
+                    </div>
+                </div>
+                <div class="category-item">
+                    <div class="thumbnail">
+                        <img class="thumbnail__image" src="./thumbnail1-440x248.jpg">
+                        <div class="thumbnail__indicator thumbnail__indicator--live text text--small text--bold">LIVE</div>
+                        <div class="thumbnail__indicator thumbnail__indicator--views text text--small">923 views</div>
+                    </div>
+                    <div class="category-item__info">                       
+                        <span class="text text--medium text--bold text--hoverable">STANDARD METAGAME CHALLANGE</span>
+                        <span class="text text--small text--dark text--hoverable">crokeyz</span>
+                        <span class="text text--small text--dark text--hoverable">Magic: The Gathering</span>
+                        <audio controls class="category-item__audio">
+                            <source src="./msza_nogi.mp3" type="audio/mpeg">
+                            Couldn't play audio
+                        </audio>
+                    </div>
+                </div>
+            </div>
+            <div class="load-more text text--small text--accented text--bold">
+                Show more <i class="load-more__arrow fas fa-chevron-down"></i>
+                <div class="load-more__cover"></div>
+                <div class="load-more__line"></div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
